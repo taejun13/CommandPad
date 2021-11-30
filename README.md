@@ -12,7 +12,7 @@
 * Use colored finger strap (e.g., red and blue as shown in above image) to identify the touched finger.
 
 ## System Component
-* [C#](C#/readme.md)
+* [C#](C%23/readme.md)
   * Cursor Manipulation of main PC
   * Handwriting (Gesture) Recognition: [Microsoft.Ink API](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/advanced/handwriting-recognition?view=netframeworkdesktop-4.8)
 * [Android](Android/readme.md)
