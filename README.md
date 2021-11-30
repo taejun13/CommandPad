@@ -12,13 +12,13 @@
 * Use colored finger strap (e.g., red and blue as shown in above image) to identify the touched finger.
 
 ## System Component
-* [C#](C%23/readme.md)
+* C#
   * Cursor Manipulation of main PC
   * Handwriting (Gesture) Recognition: [Microsoft.Ink API](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/advanced/handwriting-recognition?view=netframeworkdesktop-4.8)
-* [Android](Android/readme.md)
+* Android
   * Trackpad Simulation
   * Send touch information to main PC (through TCP networking)
-* [Python](Python/readme.md)
+* Python
   * Finger Identification (Using Camera: [Intel Realsense D415](https://www.intelrealsense.com/depth-camera-d415/))
   * OpenCV image processing
 
