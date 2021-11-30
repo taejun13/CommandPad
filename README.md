@@ -17,7 +17,7 @@
   * Handwriting (Gesture) Recognition: [Microsoft.Ink API](https://docs.microsoft.com/en-us/dotnet/desktop/wpf/advanced/handwriting-recognition?view=netframeworkdesktop-4.8)
 * [Android](Android/readme.md)
   * Trackpad Simulation
-  * Send touch information to main PC (through local TCP networking)
+  * Send touch information to main PC (through TCP networking)
 * [Python](Python/readme.md)
   * Finger Identification (Using Camera: [Intel Realsense D415](https://www.intelrealsense.com/depth-camera-d415/))
   * OpenCV image processing
