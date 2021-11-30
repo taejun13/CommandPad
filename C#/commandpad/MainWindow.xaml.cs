@@ -169,7 +169,7 @@ namespace commandpad
         MainWindow target;
         InkCanvas canvas;
         StylusPointCollection pts = new StylusPointCollection();
-        int lowerfinger = -1;   // 1 : red, 2 : blue
+        int touchedFingerIndex = -1;   // 1 : red, 2 : blue
         
         long t1;
         long t2;
@@ -272,7 +272,7 @@ namespace commandpad
                     }
 
                     if (mode == 2) {    //MotionEvent.ACTION_MOVE
-                        if (lowerfinger == (int)color.RED)
+                        if (touchedFingerIndex == (int)color.RED)
                         {
                             pts.Add(new StylusPoint(x * 0.3, y * 0.3));
                         }
@@ -285,7 +285,7 @@ namespace commandpad
                     }
                     if (mode == 3) {    //MotionEvent.ACTION_UP
                         //recognize();
-                        if (lowerfinger == (int)color.RED)
+                        if (touchedFingerIndex == (int)color.RED)
                         {
                             target.invokeClear2();
                             recognize();
@@ -318,15 +318,15 @@ namespace commandpad
 
                 if ((nbytes = stream.Read(buff, 0, buff.Length)) != 0)
                 {
-                    byte[] lowerfinger_bytes = { buff[0], buff[1], buff[2], buff[3] };
+                    byte[] touchedFingerIndex_bytes = { buff[0], buff[1], buff[2], buff[3] };
                     if (BitConverter.IsLittleEndian)
-                        Array.Reverse(lowerfinger_bytes);
+                        Array.Reverse(touchedFingerIndex_bytes);
 
-                    lowerfinger = BitConverter.ToInt32(lowerfinger_bytes, 0);
-                    if (lowerfinger == (int)color.RED)
-                        target.invokeLabel5 = String.Format("lowerfinger : RED");
-                    else if(lowerfinger == (int)color.BLUE)
-                        target.invokeLabel5 = String.Format("lowerfinger : BLUE");
+                    touchedFingerIndex = BitConverter.ToInt32(touchedFingerIndex_bytes, 0);
+                    if (touchedFingerIndex == (int)color.RED)
+                        target.invokeLabel5 = String.Format("touchedFingerIndex : RED");
+                    else if(touchedFingerIndex == (int)color.BLUE)
+                        target.invokeLabel5 = String.Format("touchedFingerIndex : BLUE");
                                     }
             }
             //stream.Close();
