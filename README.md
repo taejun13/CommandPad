@@ -19,6 +19,7 @@
   * Trackpad Simulation
   * Send touch information to main PC (through TCP networking)
 * Python
-  * Finger Identification (Using Camera: [Intel Realsense D415](https://www.intelrealsense.com/depth-camera-d415/))
+  * Finger Identification (Using Depth Camera: [Intel Realsense D415](https://www.intelrealsense.com/depth-camera-d415/))
   * OpenCV image processing
+  * Depth Clipping (To ignore noises from background colors)
 
